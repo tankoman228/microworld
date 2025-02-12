@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="microworld"
+version="1.0.0"
+displayName="Microworld"
+description="cells..."
+

@@ -1,0 +1,9 @@
+{
+  "type": "microworld:test",
+  "biomes": [
+    "microworld:test_biome"
+  ],
+  "weight": 10,
+  "features": []
+}
+

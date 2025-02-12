@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "EEE",
+        "EEE",
+        "EEE"
+    ],
+    "key": {
+        "E": {
+            "item": "microworld:dark_core"
+        }
+    },
+    "result": {
+        "item": "microworld:temnarik",
+        "count": 2
+    }
+}
+
