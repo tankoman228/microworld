@@ -20,14 +20,13 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DARK_CORE.get()))
                     .title(Component.translatable("microworld.tab"))
                     .displayItems((pParameters, pOutput) -> {
+                    	
+                    	for (var x: ModBlocks.BLOCKS.getEntries()) {
+                    		 pOutput.accept(x.get());
+                    	}
+                    	
                         pOutput.accept(ModItems.DARK_CORE.get());
                         pOutput.accept(ModItems.RAW_DARK_CORE.get());
-                        
-                        pOutput.accept(ModBlocks.TEMNARIK_BLOCK.get());
-
-                        pOutput.accept(Items.DIAMOND);
-
-
                     })
                     .build());
 	

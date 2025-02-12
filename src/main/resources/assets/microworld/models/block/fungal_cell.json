@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "microworld:block/temnarik"
+        "all": "microworld:block/fungal_cell"
     }
 }
