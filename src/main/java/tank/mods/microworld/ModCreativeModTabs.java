@@ -25,8 +25,9 @@ public class ModCreativeModTabs {
                     		 pOutput.accept(x.get());
                     	}
                     	
-                        pOutput.accept(ModItems.DARK_CORE.get());
-                        pOutput.accept(ModItems.RAW_DARK_CORE.get());
+                    	for (var x: ModItems.ITEMS.getEntries()) {
+                    		pOutput.accept(x.get());
+                    	}
                     })
                     .build());
 	
