@@ -36,8 +36,7 @@ import net.minecraft.world.entity.Entity;
 
 
 public class WormModel<T extends Entity> extends HierarchicalModel<T> {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "worm"), "main");
-	
+
     private final ModelPart worm;
 	private final ModelPart bone1;
 	private final ModelPart bone2;

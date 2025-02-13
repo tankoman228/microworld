@@ -30,7 +30,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tank.mods.microworld.blocks.ModBlocks;
 import tank.mods.microworld.items.ModItems;
 import tank.mods.microworld.mobs.ModEntities;
+import tank.mods.microworld.mobs.bacteriums.bacillus.BacillusRenderer;
+import tank.mods.microworld.mobs.bacteriums.clostridium.ClostridiumRenderer;
+import tank.mods.microworld.mobs.bacteriums.cyanobacteria.CyanobacteriaRenderer;
+import tank.mods.microworld.mobs.bacteriums.e_coli.E_ColiRenderer;
 import tank.mods.microworld.mobs.bacteriums.germ.GermRenderer;
+import tank.mods.microworld.mobs.bacteriums.nocardia.NocardiaRenderer;
+import tank.mods.microworld.mobs.bacteriums.spirillum.SpirillumRenderer;
+import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusRenderer;
 import tank.mods.microworld.mobs.multicellular.worm.WormRenderer;
 import tank.mods.microworld.worldgen.ModBiomes;
 
@@ -73,8 +80,7 @@ public class MicroworldMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.Germ.get(), GermRenderer::new);
-            EntityRenderers.register(ModEntities.Worm.get(), WormRenderer::new);
+
         }
     }
 }

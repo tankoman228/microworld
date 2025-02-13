@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.blocks.ModBlocks;
 import tank.mods.microworld.items.ModItems;
+import tank.mods.microworld.mobs.ModEntities;
 
 public class ModCreativeModTabs {
 
@@ -28,9 +29,14 @@ public class ModCreativeModTabs {
                     	for (var x: ModItems.ITEMS.getEntries()) {
                     		pOutput.accept(x.get());
                     	}
+
+						for (var x: ModEntities.SPAWN_EGGS.getEntries()) {
+                    		pOutput.accept(x.get());
+                    	}
+
+
                     })
-                    .build());
-	
+                    .build());	
 	
 	public static void register(IEventBus e) {
 		CREATIVE_MODE_TABS.register(e);

@@ -64,4 +64,6 @@ public class GermEntity extends Pufferfish {
         // Избегает спрутов (Squid) в радиусе 8 блоков
         this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, Squid.class, 8.0F, 1.5, 2.0));
     }
+
+    
 }

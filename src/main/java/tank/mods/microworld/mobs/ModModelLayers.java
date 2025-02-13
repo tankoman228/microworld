@@ -6,10 +6,31 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 
 public class ModModelLayers {
 
-	public static final ModelLayerLocation GERM_LAYER = new ModelLayerLocation(
-            new ResourceLocation(MicroworldMod.MODID, "germ_layer"), "main");
-	
 	public static final ModelLayerLocation WORM_LAYER = new ModelLayerLocation(
             new ResourceLocation(MicroworldMod.MODID, "worm_layer"), "main");
 
+    public static final ModelLayerLocation BACILLUS_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "bacillus_layer"), "main");
+            
+	public static final ModelLayerLocation E_COLI_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "e_coli_layer"), "main");
+            
+	public static final ModelLayerLocation STAPHYLOCOCCUS_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "staphylococcus_layer"), "main");
+            
+	public static final ModelLayerLocation SPIRILLUM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "spirillum_layer"), "main");
+            
+	public static final ModelLayerLocation NOCARDIA_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "nocardia_layer"), "main");
+            
+	public static final ModelLayerLocation CLOSTRIDIUM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "clostridium_layer"), "main");
+            
+	public static final ModelLayerLocation CYANOBACTERIA_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "cyanobacteria_layer"), "main");
+            
+	public static final ModelLayerLocation GERM_LAYER = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, "germ_layer"), "main");
 }
+	
