@@ -5,6 +5,9 @@ import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.MicroworldMod;
 import tank.mods.microworld.items.custom.DarkCoreItem;
 import tank.mods.microworld.items.custom.MagnifierItem;
+import tank.mods.microworld.items.custom.MicroportalItem;
+import tank.mods.microworld.items.custom.Organ_xItem;
+import tank.mods.microworld.items.custom.VacuoleItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -29,7 +32,7 @@ public class ModItems {
 	/*
 	 * Код сгенерировал при помощи формулы в табличках. Да здравствует мощь экселя, ой, гугл доков!
 	 * */
-	public static final RegistryObject<Item> microportal = ITEMS.register("microportal", () -> new ModItemBase(new Item.Properties().rarity(Rarity.RARE)));
+	public static final RegistryObject<Item> microportal = ITEMS.register("microportal", () -> new MicroportalItem(new Item.Properties()));
 	public static final RegistryObject<Item> magnifier = ITEMS.register("magnifier", () -> new MagnifierItem(new Item.Properties()));
 
 	public static final RegistryObject<Item> endoplasm = ITEMS.register("endoplasm", () -> new ModItemBase(new Item.Properties()));
@@ -37,10 +40,12 @@ public class ModItems {
 	public static final RegistryObject<Item> nucleus = ITEMS.register("nucleus", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> chitin = ITEMS.register("chitin", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> sticky_stuff = ITEMS.register("sticky_stuff", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> ribosome = ITEMS.register("ribosome", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> organ_x = ITEMS.register("organ_x", () -> new ModItemBase(new Item.Properties()));
+	
+	public static final RegistryObject<Item> ribosome = ITEMS.register("ribosome", () -> new ModItemBase(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f).build())));
+	public static final RegistryObject<Item> organ_x = ITEMS.register("organ_x", () -> new Organ_xItem(new Item.Properties()));
+	public static final RegistryObject<Item> vacuole = ITEMS.register("vacuole", () -> new VacuoleItem(new Item.Properties()));
+
 	public static final RegistryObject<Item> membrane_piece = ITEMS.register("membrane_piece", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> vacuole = ITEMS.register("vacuole", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> strange_cell = ITEMS.register("strange_cell", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> chlorophyll = ITEMS.register("chlorophyll", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> flagellum = ITEMS.register("flagellum", () -> new ModItemBase(new Item.Properties()));

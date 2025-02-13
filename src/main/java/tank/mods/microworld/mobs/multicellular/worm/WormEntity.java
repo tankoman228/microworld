@@ -4,38 +4,29 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Cod;
-import net.minecraft.world.entity.animal.Dolphin;
-import net.minecraft.world.entity.animal.Squid;
-import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.animal.axolotl.Axolotl;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import tank.mods.microworld.MicroworldMod;
 import tank.mods.microworld.mobs.Microorganism;
+import tank.mods.microworld.mobs.Microorganism.MicroorganismType;
 import tank.mods.microworld.mobs.bacteriums.germ.GermEntity;
 import net.minecraft.world.BossEvent;
 
-public class WormEntity extends Microorganism {
+@Microorganism(MicroorganismType.MULTICELLULAR)
+public class WormEntity extends Axolotl {
 
     public static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(WormEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -55,7 +46,7 @@ public class WormEntity extends Microorganism {
     	);
     
     public WormEntity(EntityType<? extends Axolotl> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel, MicroorganismType.MULTICELLULAR);
+        super(pEntityType, pLevel);
     }
     
     public static AttributeSupplier.Builder createAttributes() {

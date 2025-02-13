@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -50,19 +51,27 @@ public class MagnifierItem extends ModItemBase {
         if (!entities.isEmpty()) {
             if (!level.isClientSide) {
                 for (Entity entity : entities) {
-                    if (entity instanceof Microorganism) {
-                        var m = (Microorganism)entity;
-                        m.ViewDescriptionForMagnifier(player);
-                    }
-                    else {
+                    Microorganism annotation = entity.getClass().getAnnotation(Microorganism.class);
+                    if (annotation != null) {
+                        ViewDescriptionForMagnifier(entity, player, annotation.value());
+                    } else {
                         player.displayClientMessage(Component.translatable("microworld.magnifier.no_microorganism"), false);
                     }
                 }
             }
-            player.getCooldowns().addCooldown(this, 100); 
+            player.getCooldowns().addCooldown(this, 100);
             return InteractionResultHolder.success(player.getItemInHand(hand));
         }
 
         return InteractionResultHolder.pass(player.getItemInHand(hand));
+    }
+
+    private void ViewDescriptionForMagnifier(Entity m, Player player, Microorganism.MicroorganismType type) {
+        player.displayClientMessage(Component.translatable("microworld.type." + type.toString().toLowerCase()), false);
+        player.displayClientMessage(GetDescriptionForMagnifier(m), false);
+    }
+
+    protected MutableComponent GetDescriptionForMagnifier(Entity m) {
+        return Component.translatable("microworld.description." + m.getClass().getSimpleName().toLowerCase().replace("entity", ""));
     }
 }

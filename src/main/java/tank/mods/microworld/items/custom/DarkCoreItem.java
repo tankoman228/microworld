@@ -19,33 +19,11 @@ public class DarkCoreItem extends ModItemBase {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-    	
-    	
+    
         if (context.getPlayer() instanceof ServerPlayer player) {
-        	
-            ServerLevel currentWorld = player.server.getLevel(player.level().dimension());
-            ServerLevel targetWorld = player.server.getLevel(
-                player.level().dimension() == ModDimensions.MICROWORLD_LEVEL_KEY
-                    ? Level.OVERWORLD
-                    : ModDimensions.MICROWORLD_LEVEL_KEY
-            );
-
-            if (targetWorld != null) {
-                player.teleportTo(targetWorld, player.getX(), 374, player.getZ(), player.getYRot(), player.getXRot());
-                
-                // Добавляем задержку (перезарядку)
-                player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 5));
-                player.getCooldowns().addCooldown(this, 200); // 10 секунд
-
-                // Звук телепортации
-                //targetWorld.playSound(null, targetPos, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
-                player.sendSystemMessage(Component.literal("Вы переместились в " + (targetWorld.dimension() == Level.OVERWORLD ? "Обычный мир" : "Микромир")));
-            }
-
+            player.disconnect();
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
-
-
 }
