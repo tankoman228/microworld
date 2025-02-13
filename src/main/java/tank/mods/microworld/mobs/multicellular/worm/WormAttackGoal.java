@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.multicellular;
+package tank.mods.microworld.mobs.multicellular.worm;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;

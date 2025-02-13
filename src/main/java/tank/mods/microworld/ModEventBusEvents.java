@@ -4,8 +4,8 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import tank.mods.microworld.mobs.ModEntities;
-import tank.mods.microworld.mobs.bacteriums.GermEntity;
-import tank.mods.microworld.mobs.multicellular.WormEntity;
+import tank.mods.microworld.mobs.bacteriums.germ.GermEntity;
+import tank.mods.microworld.mobs.multicellular.worm.WormEntity;
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {

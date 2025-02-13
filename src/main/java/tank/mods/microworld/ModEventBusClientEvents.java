@@ -5,8 +5,8 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import tank.mods.microworld.mobs.ModModelLayers;
-import tank.mods.microworld.mobs.bacteriums.GermModel;
-import tank.mods.microworld.mobs.multicellular.WormModel;
+import tank.mods.microworld.mobs.bacteriums.germ.GermModel;
+import tank.mods.microworld.mobs.multicellular.worm.WormModel;
 
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

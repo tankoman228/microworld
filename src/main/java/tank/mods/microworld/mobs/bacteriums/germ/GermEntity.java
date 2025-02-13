@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.bacteriums;
+package tank.mods.microworld.mobs.bacteriums.germ;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
@@ -18,17 +18,19 @@ import net.minecraft.world.entity.ai.goal.EatBlockGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Squid;
 import net.minecraft.world.entity.animal.WaterAnimal;
+import net.minecraft.world.entity.animal.axolotl.Axolotl;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import tank.mods.microworld.mobs.Microorganism;
 
-public class GermEntity extends WaterAnimal {
+public class GermEntity extends Microorganism {
 
-	public  GermEntity(EntityType<? extends WaterAnimal> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
-        this.moveControl = new GermMoveControl(this, 10, 15);
+	public GermEntity(EntityType<? extends Axolotl> pEntityType, Level pLevel) {
+        super(pEntityType, pLevel, MicroorganismType.BACTERIUM);
+        this.moveControl = new GermMoveControl(this, 0, 150);
     }
 	
     public static AttributeSupplier.Builder createAttributes() {

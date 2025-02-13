@@ -30,8 +30,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tank.mods.microworld.blocks.ModBlocks;
 import tank.mods.microworld.items.ModItems;
 import tank.mods.microworld.mobs.ModEntities;
-import tank.mods.microworld.mobs.bacteriums.GermRenderer;
-import tank.mods.microworld.mobs.multicellular.WormRenderer;
+import tank.mods.microworld.mobs.bacteriums.germ.GermRenderer;
+import tank.mods.microworld.mobs.multicellular.worm.WormRenderer;
 import tank.mods.microworld.worldgen.ModBiomes;
 
 /**

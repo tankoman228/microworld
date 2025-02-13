@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.bacteriums;
+package tank.mods.microworld.mobs.bacteriums.germ;
 
 import java.util.List;
 

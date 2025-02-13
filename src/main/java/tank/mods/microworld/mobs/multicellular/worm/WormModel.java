@@ -1,7 +1,7 @@
 // Made with Blockbench 4.12.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-package tank.mods.microworld.mobs.multicellular;
+package tank.mods.microworld.mobs.multicellular.worm;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -7,8 +7,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.mobs.bacteriums.GermEntity;
-import tank.mods.microworld.mobs.multicellular.WormEntity;
+import tank.mods.microworld.mobs.bacteriums.germ.GermEntity;
+import tank.mods.microworld.mobs.multicellular.worm.WormEntity;
 
 public class ModEntities {
 	

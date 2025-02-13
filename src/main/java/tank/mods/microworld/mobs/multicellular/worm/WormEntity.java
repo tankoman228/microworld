@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.multicellular;
+package tank.mods.microworld.mobs.multicellular.worm;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -31,10 +31,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.mobs.bacteriums.GermEntity;
+import tank.mods.microworld.mobs.Microorganism;
+import tank.mods.microworld.mobs.bacteriums.germ.GermEntity;
 import net.minecraft.world.BossEvent;
 
-public class WormEntity extends Axolotl {
+public class WormEntity extends Microorganism {
 
     public static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(WormEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -48,13 +49,13 @@ public class WormEntity extends Axolotl {
     public final AnimationState damagedAnimationState = new AnimationState();
     
     private final ServerBossEvent bossEvent = new ServerBossEvent(
-    	    Component.translatable("entity.temnarik.worm"), // Заголовок (можно локализовать)
+    	    Component.translatable("entity.microworld.worm"), // Заголовок (можно локализовать)
     	    BossEvent.BossBarColor.RED, // Цвет полоски
     	    BossEvent.BossBarOverlay.PROGRESS // Вид полоски
     	);
     
     public WormEntity(EntityType<? extends Axolotl> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+        super(pEntityType, pLevel, MicroorganismType.MULTICELLULAR);
     }
     
     public static AttributeSupplier.Builder createAttributes() {

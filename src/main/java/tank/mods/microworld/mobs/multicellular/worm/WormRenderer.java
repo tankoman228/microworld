@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.multicellular;
+package tank.mods.microworld.mobs.multicellular.worm;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 

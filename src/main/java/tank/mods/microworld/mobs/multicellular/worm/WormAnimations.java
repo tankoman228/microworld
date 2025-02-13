@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.multicellular;
+package tank.mods.microworld.mobs.multicellular.worm;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;

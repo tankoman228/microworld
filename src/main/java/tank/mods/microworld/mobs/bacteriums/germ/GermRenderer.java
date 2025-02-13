@@ -1,4 +1,4 @@
-package tank.mods.microworld.mobs.bacteriums;
+package tank.mods.microworld.mobs.bacteriums.germ;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import net.minecraft.client.renderer.MultiBufferSource;

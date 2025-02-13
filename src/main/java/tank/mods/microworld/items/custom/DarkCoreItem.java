@@ -1,20 +1,18 @@
-package tank.mods.microworld.items;
+package tank.mods.microworld.items.custom;
 
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import tank.mods.microworld.items.ModItemBase;
 import tank.mods.microworld.worldgen.ModDimensions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.network.chat.Component;
 
-public class DarkCoreItem extends Item {
+public class DarkCoreItem extends ModItemBase {
+    
     public DarkCoreItem(Properties properties) {
         super(properties);
     }
@@ -33,10 +31,10 @@ public class DarkCoreItem extends Item {
             );
 
             if (targetWorld != null) {
-                player.teleportTo(targetWorld, player.getX(), 384, player.getZ(), player.getYRot(), player.getXRot());
+                player.teleportTo(targetWorld, player.getX(), 374, player.getZ(), player.getYRot(), player.getXRot());
                 
                 // Добавляем задержку (перезарядку)
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 5));
+                player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 5));
                 player.getCooldowns().addCooldown(this, 200); // 10 секунд
 
                 // Звук телепортации
@@ -48,4 +46,6 @@ public class DarkCoreItem extends Item {
         }
         return InteractionResult.PASS;
     }
+
+
 }
