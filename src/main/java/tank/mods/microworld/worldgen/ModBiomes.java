@@ -12,7 +12,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.mobs.ModEntities;
+import tank.mods.microworld.entity.ModEntities;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> TEST_BIOME = ResourceKey.create(Registries.BIOME,

@@ -15,8 +15,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import tank.mods.microworld.entity.Microorganism;
 import tank.mods.microworld.items.ModItemBase;
-import tank.mods.microworld.mobs.Microorganism;
 
 public class MagnifierItem extends ModItemBase {
 

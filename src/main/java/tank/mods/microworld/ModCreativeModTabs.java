@@ -9,8 +9,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.blocks.ModBlocks;
+import tank.mods.microworld.entity.ModEntities;
 import tank.mods.microworld.items.ModItems;
-import tank.mods.microworld.mobs.ModEntities;
 
 public class ModCreativeModTabs {
 

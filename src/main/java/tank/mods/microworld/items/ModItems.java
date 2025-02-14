@@ -9,6 +9,7 @@ import tank.mods.microworld.items.custom.FoodPouchItem;
 import tank.mods.microworld.items.custom.MagnifierItem;
 import tank.mods.microworld.items.custom.MicroportalItem;
 import tank.mods.microworld.items.custom.Organ_xItem;
+import tank.mods.microworld.items.custom.SanitizerItem;
 import tank.mods.microworld.items.custom.SpiritBubbleItem;
 import tank.mods.microworld.items.custom.VacuoleItem;
 import net.minecraft.world.food.FoodProperties;
@@ -69,7 +70,7 @@ public class ModItems {
 	public static final RegistryObject<Item> food_pouch = ITEMS.register("food_pouch", () -> new FoodPouchItem(new Item.Properties()));
 	public static final RegistryObject<Item> germ_boots = ITEMS.register("germ_boots", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> poison_bomb = ITEMS.register("poison_bomb", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> sanitizer = ITEMS.register("sanitizer", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> sanitizer = ITEMS.register("sanitizer", () -> new SanitizerItem(new Item.Properties()));
 
 	public static final RegistryObject<Item> stinging_sword = ITEMS.register("stinging_sword", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> cell_shuriken = ITEMS.register("cell_shuriken", () -> new ModItemBase(new Item.Properties()));

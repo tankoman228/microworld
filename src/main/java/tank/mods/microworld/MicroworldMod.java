@@ -28,17 +28,17 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tank.mods.microworld.blocks.ModBlocks;
+import tank.mods.microworld.entity.ModEntities;
+import tank.mods.microworld.entity.bacteriums.bacillus.BacillusRenderer;
+import tank.mods.microworld.entity.bacteriums.clostridium.ClostridiumRenderer;
+import tank.mods.microworld.entity.bacteriums.cyanobacteria.CyanobacteriaRenderer;
+import tank.mods.microworld.entity.bacteriums.e_coli.E_ColiRenderer;
+import tank.mods.microworld.entity.bacteriums.germ.GermRenderer;
+import tank.mods.microworld.entity.bacteriums.nocardia.NocardiaRenderer;
+import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumRenderer;
+import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusRenderer;
+import tank.mods.microworld.entity.multicellular.worm.WormRenderer;
 import tank.mods.microworld.items.ModItems;
-import tank.mods.microworld.mobs.ModEntities;
-import tank.mods.microworld.mobs.bacteriums.bacillus.BacillusRenderer;
-import tank.mods.microworld.mobs.bacteriums.clostridium.ClostridiumRenderer;
-import tank.mods.microworld.mobs.bacteriums.cyanobacteria.CyanobacteriaRenderer;
-import tank.mods.microworld.mobs.bacteriums.e_coli.E_ColiRenderer;
-import tank.mods.microworld.mobs.bacteriums.germ.GermRenderer;
-import tank.mods.microworld.mobs.bacteriums.nocardia.NocardiaRenderer;
-import tank.mods.microworld.mobs.bacteriums.spirillum.SpirillumRenderer;
-import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusRenderer;
-import tank.mods.microworld.mobs.multicellular.worm.WormRenderer;
 import tank.mods.microworld.worldgen.ModBiomes;
 
 /**

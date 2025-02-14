@@ -5,9 +5,9 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import tank.mods.microworld.entity.Microorganism;
+import tank.mods.microworld.entity.Microorganism.MicroorganismType;
 import tank.mods.microworld.items.ModItemBase;
-import tank.mods.microworld.mobs.Microorganism;
-import tank.mods.microworld.mobs.Microorganism.MicroorganismType;
 
 public class SpiritBubbleItem extends ModItemBase {
 
