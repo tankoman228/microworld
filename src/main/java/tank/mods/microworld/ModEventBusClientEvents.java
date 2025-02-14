@@ -30,7 +30,6 @@ import tank.mods.microworld.entity.plants.diatom.DiatomModel1;
 import tank.mods.microworld.entity.plants.diatom.DiatomModel2;
 import tank.mods.microworld.entity.plants.diatom.DiatomModel3;
 import tank.mods.microworld.entity.plants.diatom.DiatomRenderer;
-import tank.mods.microworld.entity.projectiles.SanitizerProjectileRenderer;
 
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -74,6 +73,10 @@ public class ModEventBusClientEvents {
             (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
         event.registerEntityRenderer(ModEntities.POISON_BOMB_PROJECTILE.get(), 
             (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
+        event.registerEntityRenderer(ModEntities.STINGING_CELL_PROJECTILE.get(), 
+            (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
+        event.registerEntityRenderer(ModEntities.CELL_SHURIKEN_PROJECTILE.get(), 
+            (context) -> new ThrownItemRenderer<>(context, 2.0F, true));
     }
 }
 

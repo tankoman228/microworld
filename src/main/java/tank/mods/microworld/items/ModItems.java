@@ -3,6 +3,7 @@ package tank.mods.microworld.items;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.MicroworldMod;
+import tank.mods.microworld.items.custom.CellShuriken;
 import tank.mods.microworld.items.custom.DarkCoreItem;
 import tank.mods.microworld.items.custom.FlagellarMotorItem;
 import tank.mods.microworld.items.custom.FoodPouchItem;
@@ -14,6 +15,8 @@ import tank.mods.microworld.items.custom.Organ_xItem;
 import tank.mods.microworld.items.custom.PoisonBombItem;
 import tank.mods.microworld.items.custom.SanitizerItem;
 import tank.mods.microworld.items.custom.SpiritBubbleItem;
+import tank.mods.microworld.items.custom.StingingCellItem;
+import tank.mods.microworld.items.custom.StingingSwordItem;
 import tank.mods.microworld.items.custom.VacuoleItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
@@ -64,7 +67,7 @@ public class ModItems {
 	public static final RegistryObject<Item> amoebic_slurry = ITEMS.register("amoebic_slurry", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> rotifier_fan = ITEMS.register("rotifier_fan", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> microdudka = ITEMS.register("microdudka", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> stinging_cell = ITEMS.register("stinging_cell", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> stinging_cell = ITEMS.register("stinging_cell", () -> new StingingCellItem(new Item.Properties()));
 	public static final RegistryObject<Item> worm_fragment = ITEMS.register("worm_fragment", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> bedroсk_piece = ITEMS.register("bedrock_piece", () -> new ModItemBase(new Item.Properties()));
 
@@ -75,8 +78,8 @@ public class ModItems {
 	public static final RegistryObject<Item> poison_bomb = ITEMS.register("poison_bomb", () -> new PoisonBombItem(new Item.Properties()));
 	public static final RegistryObject<Item> sanitizer = ITEMS.register("sanitizer", () -> new SanitizerItem(new Item.Properties()));
 
-	public static final RegistryObject<Item> stinging_sword = ITEMS.register("stinging_sword", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> cell_shuriken = ITEMS.register("cell_shuriken", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> stinging_sword = ITEMS.register("stinging_sword", () -> new StingingSwordItem(new Item.Properties()));
+	public static final RegistryObject<Item> cell_shuriken = ITEMS.register("cell_shuriken", () -> new CellShuriken(new Item.Properties()));
 	public static final RegistryObject<Item> superpipe = ITEMS.register("superpipe", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> anti_infusor_spike = ITEMS.register("anti_infusor_spike", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> microbial_builder = ITEMS.register("microbial_builder", () -> new ModItemBase(new Item.Properties()));

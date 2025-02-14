@@ -25,6 +25,7 @@ import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.entity.multicellular.worm.WormEntity;
 import tank.mods.microworld.entity.plants.diatom.DiatomEntity;
+import tank.mods.microworld.entity.projectiles.CellShurikenProjectileEntity;
 import tank.mods.microworld.entity.projectiles.PoisonBombProjectileEntity;
 import tank.mods.microworld.entity.projectiles.SanitizerProjectileEntity;
 import tank.mods.microworld.items.ModItems;
@@ -90,9 +91,18 @@ public class ModEntities {
 		PROJECTILE_TYPES.register("poison_bomb_projectile", () -> EntityType.Builder.<PoisonBombProjectileEntity>of(PoisonBombProjectileEntity::new, MobCategory.MISC)
 			.sized(0.5f, 0.5f).build("poison_bomb_projectile"));
 
+	public static final RegistryObject<EntityType<PoisonBombProjectileEntity>> STINGING_CELL_PROJECTILE =
+		PROJECTILE_TYPES.register("stinging_cell_projectile", () -> EntityType.Builder.<PoisonBombProjectileEntity>of(PoisonBombProjectileEntity::new, MobCategory.MISC)
+			.sized(0.5f, 0.5f).build("stinging_cell_projectile"));
+
+	public static final RegistryObject<EntityType<CellShurikenProjectileEntity>> CELL_SHURIKEN_PROJECTILE =
+		PROJECTILE_TYPES.register("cell_shuriken_projectile", () -> EntityType.Builder.<CellShurikenProjectileEntity>of(CellShurikenProjectileEntity::new, MobCategory.MISC)
+			.sized(2f, 2f).build("cell_shuriken_projectile"));
+	
+	
 	public static final DeferredRegister<Item> SPAWN_EGGS = DeferredRegister.create(ForgeRegistries.ITEMS, MicroworldMod.MODID);
 
-	
+
 	public static void register(IEventBus bus) {
 
 		MOB_TYPES.register(bus);
