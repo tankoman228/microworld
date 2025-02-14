@@ -22,6 +22,7 @@ public class VacuoleItem extends ModItemBase {
     public VacuoleItem(Properties properties) {
         super(properties.food(new FoodProperties.Builder().nutrition(6).saturationMod(2f).build()));
     }
+    
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         if (!level.isClientSide && entity instanceof Player player) {

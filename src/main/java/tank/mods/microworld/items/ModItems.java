@@ -4,9 +4,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tank.mods.microworld.MicroworldMod;
 import tank.mods.microworld.items.custom.DarkCoreItem;
+import tank.mods.microworld.items.custom.FlagellarMotorItem;
+import tank.mods.microworld.items.custom.FoodPouchItem;
 import tank.mods.microworld.items.custom.MagnifierItem;
 import tank.mods.microworld.items.custom.MicroportalItem;
 import tank.mods.microworld.items.custom.Organ_xItem;
+import tank.mods.microworld.items.custom.SpiritBubbleItem;
 import tank.mods.microworld.items.custom.VacuoleItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
@@ -51,7 +54,7 @@ public class ModItems {
 	public static final RegistryObject<Item> chlorophyll = ITEMS.register("chlorophyll", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> flagellum = ITEMS.register("flagellum", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> funiculus = ITEMS.register("funiculus", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> spirit_bubble = ITEMS.register("spirit_bubble", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> spirit_bubble = ITEMS.register("spirit_bubble", () -> new SpiritBubbleItem(new Item.Properties()));
 	public static final RegistryObject<Item> germ = ITEMS.register("germ", () -> new ModItemBase(new Item.Properties()));
 
 	public static final RegistryObject<Item> amoebic_slurry = ITEMS.register("amoebic_slurry", () -> new ModItemBase(new Item.Properties()));
@@ -62,8 +65,8 @@ public class ModItems {
 	public static final RegistryObject<Item> bedroсk_piece = ITEMS.register("bedrock_piece", () -> new ModItemBase(new Item.Properties()));
 
 
-	public static final RegistryObject<Item> flagellar_motor = ITEMS.register("flagellar_motor", () -> new ModItemBase(new Item.Properties()));
-	public static final RegistryObject<Item> food_pouch = ITEMS.register("food_pouch", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> flagellar_motor = ITEMS.register("flagellar_motor", () -> new FlagellarMotorItem(new Item.Properties()));
+	public static final RegistryObject<Item> food_pouch = ITEMS.register("food_pouch", () -> new FoodPouchItem(new Item.Properties()));
 	public static final RegistryObject<Item> germ_boots = ITEMS.register("germ_boots", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> poison_bomb = ITEMS.register("poison_bomb", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> sanitizer = ITEMS.register("sanitizer", () -> new ModItemBase(new Item.Properties()));
