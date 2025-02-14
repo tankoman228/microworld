@@ -31,9 +31,8 @@ public class E_ColiRenderer extends MobRenderer<E_ColiEntity, E_ColiModel<E_Coli
     @Override
     public void render(E_ColiEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack,
                        MultiBufferSource pBuffer, int pPackedLight) {
-        if(pEntity.isBaby()) {
-            pMatrixStack.scale(0.5f, 0.5f, 0.5f);
-        }
+        
+        pMatrixStack.scale(0.5f, 0.5f, 0.5f);    
         super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);
     }
 }

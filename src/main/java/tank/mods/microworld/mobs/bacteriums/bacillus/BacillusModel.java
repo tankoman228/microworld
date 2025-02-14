@@ -15,6 +15,8 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import tank.mods.microworld.mobs.multicellular.worm.WormAnimations;
+import tank.mods.microworld.mobs.multicellular.worm.WormEntity;
 
 public class BacillusModel<T extends Entity> extends HierarchicalModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
@@ -104,8 +106,11 @@ public class BacillusModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+	public void setupAnim(Entity entity_, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		
+		this.root().getAllParts().forEach(ModelPart::resetPose);
+		var entity = (BacillusEntity) entity_;
+		animate(entity.idleAnimationState, BacillusAnimations.LOOP, ageInTicks, 1f);
 	}
 
 	@Override

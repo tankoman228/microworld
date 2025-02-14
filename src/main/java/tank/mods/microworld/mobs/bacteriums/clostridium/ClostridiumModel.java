@@ -15,6 +15,8 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import tank.mods.microworld.mobs.bacteriums.bacillus.BacillusAnimations;
+import tank.mods.microworld.mobs.bacteriums.bacillus.BacillusEntity;
 
 public class ClostridiumModel<T extends Entity> extends HierarchicalModel<T> {
 	
@@ -39,8 +41,11 @@ public class ClostridiumModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Entity entity_, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.root().getAllParts().forEach(ModelPart::resetPose);
 
+		var entity = (ClostridiumEntity) entity_;
+		animate(entity.moveAnimationState, ClostridiumAnimations.MOVE, ageInTicks, 1f);
 	}
 
 	@Override

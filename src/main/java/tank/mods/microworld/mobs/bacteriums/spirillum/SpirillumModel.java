@@ -15,6 +15,8 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import tank.mods.microworld.mobs.bacteriums.e_coli.E_ColiAnimations;
+import tank.mods.microworld.mobs.bacteriums.e_coli.E_ColiEntity;
 
 public class SpirillumModel<T extends Entity> extends HierarchicalModel<T>  {
 
@@ -94,8 +96,11 @@ public class SpirillumModel<T extends Entity> extends HierarchicalModel<T>  {
 	}
 
 	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Entity entity_, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.root().getAllParts().forEach(ModelPart::resetPose);
 
+		var entity = (SpirillumEntity) entity_;
+		animate(entity.rotateAnimationState, SpirillumAnimations.LOOP, ageInTicks, 1f);
 	}
 
 	@Override

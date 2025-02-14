@@ -15,6 +15,8 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import tank.mods.microworld.mobs.bacteriums.clostridium.ClostridiumAnimations;
+import tank.mods.microworld.mobs.bacteriums.clostridium.ClostridiumEntity;
 
 public class E_ColiModel<T extends Entity> extends HierarchicalModel<T> {
 	
@@ -42,8 +44,12 @@ public class E_ColiModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Entity entity_, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.root().getAllParts().forEach(ModelPart::resetPose);
 
+		var entity = (E_ColiEntity) entity_;
+		animate(entity.divideAnimationState, E_ColiAnimations.DIVIDE, ageInTicks, 1f);
+		animate(entity.rotateAnimationState, E_ColiAnimations.ROTATE, ageInTicks, 1f);
 	}
 
 	@Override
@@ -53,7 +59,6 @@ public class E_ColiModel<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public ModelPart root() {
-		// TODO Auto-generated method stub
 		return central;
 	}
 }
