@@ -6,6 +6,7 @@ import tank.mods.microworld.MicroworldMod;
 import tank.mods.microworld.items.custom.DarkCoreItem;
 import tank.mods.microworld.items.custom.FlagellarMotorItem;
 import tank.mods.microworld.items.custom.FoodPouchItem;
+import tank.mods.microworld.items.custom.GermItem;
 import tank.mods.microworld.items.custom.MagnifierItem;
 import tank.mods.microworld.items.custom.MicroportalItem;
 import tank.mods.microworld.items.custom.Organ_xItem;
@@ -56,7 +57,7 @@ public class ModItems {
 	public static final RegistryObject<Item> flagellum = ITEMS.register("flagellum", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> funiculus = ITEMS.register("funiculus", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> spirit_bubble = ITEMS.register("spirit_bubble", () -> new SpiritBubbleItem(new Item.Properties()));
-	public static final RegistryObject<Item> germ = ITEMS.register("germ", () -> new ModItemBase(new Item.Properties()));
+	public static final RegistryObject<Item> germ = ITEMS.register("germ", () -> new GermItem(new Item.Properties()));
 
 	public static final RegistryObject<Item> amoebic_slurry = ITEMS.register("amoebic_slurry", () -> new ModItemBase(new Item.Properties()));
 	public static final RegistryObject<Item> rotifier_fan = ITEMS.register("rotifier_fan", () -> new ModItemBase(new Item.Properties()));
