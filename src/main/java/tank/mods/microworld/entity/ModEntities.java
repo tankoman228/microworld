@@ -25,6 +25,7 @@ import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.entity.multicellular.worm.WormEntity;
 import tank.mods.microworld.entity.plants.diatom.DiatomEntity;
+import tank.mods.microworld.entity.projectiles.PoisonBombProjectileEntity;
 import tank.mods.microworld.entity.projectiles.SanitizerProjectileEntity;
 import tank.mods.microworld.items.ModItems;
 
@@ -85,9 +86,13 @@ public class ModEntities {
 		PROJECTILE_TYPES.register("sanitizer_projectile", () -> EntityType.Builder.<SanitizerProjectileEntity>of(SanitizerProjectileEntity::new, MobCategory.MISC)
 				.sized(0.5f, 0.5f).build("sanitizer_projectile"));
 
+	public static final RegistryObject<EntityType<PoisonBombProjectileEntity>> POISON_BOMB_PROJECTILE =
+		PROJECTILE_TYPES.register("poison_bomb_projectile", () -> EntityType.Builder.<PoisonBombProjectileEntity>of(PoisonBombProjectileEntity::new, MobCategory.MISC)
+			.sized(0.5f, 0.5f).build("poison_bomb_projectile"));
 
 	public static final DeferredRegister<Item> SPAWN_EGGS = DeferredRegister.create(ForgeRegistries.ITEMS, MicroworldMod.MODID);
 
+	
 	public static void register(IEventBus bus) {
 
 		MOB_TYPES.register(bus);

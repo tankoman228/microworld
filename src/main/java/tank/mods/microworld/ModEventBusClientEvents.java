@@ -69,10 +69,12 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);
     }
     @SubscribeEvent
-        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerEntityRenderer(ModEntities.SANITIZER_PROJECTILE.get(), 
-                (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
-        }
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntities.SANITIZER_PROJECTILE.get(), 
+            (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
+        event.registerEntityRenderer(ModEntities.POISON_BOMB_PROJECTILE.get(), 
+            (context) -> new ThrownItemRenderer<>(context, 1.0F, true));
+    }
 }
 
     
