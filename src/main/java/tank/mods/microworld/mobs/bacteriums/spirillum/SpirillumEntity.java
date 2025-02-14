@@ -38,10 +38,16 @@ public class SpirillumEntity extends Dolphin {
     public void tick() {
         super.tick();
 
-        rotateFrame = (rotateFrame + 1) % 55;
+        rotateFrame++;
 
         if (this.getDeltaMovement().length() > 0.01)
-            rotateAnimationState.start(rotateFrame);
+            rotateAnimationState.startIfStopped(rotateFrame);
+
+        if (rotateFrame > 55) {
+            rotateFrame = 0;
+            rotateAnimationState.stop();
+        }
+
 
         if (!level().isClientSide()) {
             Player player = level().getNearestPlayer(this, 12.0D);

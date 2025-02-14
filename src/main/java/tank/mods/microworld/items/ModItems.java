@@ -9,6 +9,7 @@ import tank.mods.microworld.items.custom.MicroportalItem;
 import tank.mods.microworld.items.custom.Organ_xItem;
 import tank.mods.microworld.items.custom.VacuoleItem;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -76,6 +77,52 @@ public class ModItems {
 	public static final RegistryObject<Item> nematode_pick = ITEMS.register("nematode_pick", () -> new ModItemBase(new Item.Properties()));
 
 	public static final RegistryObject<Item> ayubov_submarine = ITEMS.register("ayubov_submarine", () -> new ModItemBase(new Item.Properties()));
+
+    public static final RegistryObject<Item> BEDROCK_HELMET = ITEMS.register("bedrock_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.BEDROCK, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> BEDROCK_CHESTPLATE = ITEMS.register("bedrock_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.BEDROCK, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> BEDROCK_LEGGINGS = ITEMS.register("bedrock_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.BEDROCK, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> BEDROCK_BOOTS = ITEMS.register("bedrock_boots",
+            () -> new ModArmorItem(ModArmorMaterials.BEDROCK, ArmorItem.Type.BOOTS, new Item.Properties()));
+	
+	public static final RegistryObject<Item> CHITIN_HELMET = ITEMS.register("chitin_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> CHITIN_CHESTPLATE = ITEMS.register("chitin_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> CHITIN_LEGGINGS = ITEMS.register("chitin_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> CHITIN_BOOTS = ITEMS.register("chitin_boots",
+            () -> new ModArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> CILLIARY_HELMET = ITEMS.register("cilliary_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.CILLIARY, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> CILLIARY_CHESTPLATE = ITEMS.register("cilliary_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.CILLIARY, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> CILLIARY_LEGGINGS = ITEMS.register("cilliary_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.CILLIARY, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> CILLIARY_BOOTS = ITEMS.register("cilliary_boots",
+            () -> new ModArmorItem(ModArmorMaterials.CILLIARY, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> FLEX_HELMET = ITEMS.register("flex_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.FLEX, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> FLEX_CHESTPLATE = ITEMS.register("flex_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.FLEX, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> FLEX_LEGGINGS = ITEMS.register("flex_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.FLEX, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> FLEX_BOOTS = ITEMS.register("flex_boots",
+            () -> new ModArmorItem(ModArmorMaterials.FLEX, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> STICKY_HELMET = ITEMS.register("sticky_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.STICKY, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> STICKY_CHESTPLATE = ITEMS.register("sticky_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.STICKY, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> STICKY_LEGGINGS = ITEMS.register("sticky_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.STICKY, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> STICKY_BOOTS = ITEMS.register("sticky_boots",
+            () -> new ModArmorItem(ModArmorMaterials.STICKY, ArmorItem.Type.BOOTS, new Item.Properties()));
+
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

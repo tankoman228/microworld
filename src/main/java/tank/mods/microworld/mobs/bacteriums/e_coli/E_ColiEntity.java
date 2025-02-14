@@ -107,10 +107,10 @@ public class E_ColiEntity extends Turtle {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 4D)
                 .add(Attributes.FOLLOW_RANGE, 20D)
-                .add(Attributes.MOVEMENT_SPEED, 0.6D)
+                .add(Attributes.MOVEMENT_SPEED, 0.1D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
                 .add(Attributes.ATTACK_DAMAGE, 2f)
-                .add(Attributes.FLYING_SPEED, 0.2f);
+                .add(Attributes.FLYING_SPEED, 0.01f);
     }
 }
