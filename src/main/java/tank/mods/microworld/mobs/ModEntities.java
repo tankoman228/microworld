@@ -25,6 +25,7 @@ import tank.mods.microworld.mobs.bacteriums.nocardia.NocardiaEntity;
 import tank.mods.microworld.mobs.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.mobs.multicellular.worm.WormEntity;
+import tank.mods.microworld.mobs.plants.diatom.DiatomEntity;
 
 
 public class ModEntities {
@@ -69,6 +70,9 @@ public class ModEntities {
 				ENTITY_TYPES.register("cyanobacteria", () -> EntityType.Builder.of(CyanobacteriaEntity::new, MobCategory.CREATURE)
 						.sized(0.1f, 0.1f).build("cyanobacteria"));
 
+		public static final RegistryObject<EntityType<DiatomEntity>> Diatom =
+				ENTITY_TYPES.register("diatom", () -> EntityType.Builder.of(DiatomEntity::new, MobCategory.CREATURE)
+					.sized(0.4f, 0.4f).build("diatom"));
 
 	public static final DeferredRegister<Item> SPAWN_EGGS = DeferredRegister.create(ForgeRegistries.ITEMS, MicroworldMod.MODID);
 

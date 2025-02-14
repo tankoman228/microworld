@@ -25,6 +25,10 @@ import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusModel;
 import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusRenderer;
 import tank.mods.microworld.mobs.multicellular.worm.WormModel;
 import tank.mods.microworld.mobs.multicellular.worm.WormRenderer;
+import tank.mods.microworld.mobs.plants.diatom.DiatomModel1;
+import tank.mods.microworld.mobs.plants.diatom.DiatomModel2;
+import tank.mods.microworld.mobs.plants.diatom.DiatomModel3;
+import tank.mods.microworld.mobs.plants.diatom.DiatomRenderer;
 
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -40,8 +44,12 @@ public class ModEventBusClientEvents {
         EntityRenderers.register(ModEntities.Clostridium.get(), ClostridiumRenderer::new);
         EntityRenderers.register(ModEntities.Cyanobacteria.get(), CyanobacteriaRenderer::new);
         EntityRenderers.register(ModEntities.Bacillus.get(), BacillusRenderer::new);
+        
+        EntityRenderers.register(ModEntities.Diatom.get(), DiatomRenderer::new);
+
         EntityRenderers.register(ModEntities.Worm.get(), WormRenderer::new);
 
+        
         event.registerLayerDefinition(ModModelLayers.BACILLUS_LAYER, BacillusModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.E_COLI_LAYER, E_ColiModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.STAPHYLOCOCCUS_LAYER, StaphylococcusModel::createBodyLayer);
@@ -49,6 +57,11 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.NOCARDIA_LAYER, NocardiaModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.CYANOBACTERIA_LAYER, CyanobacteriaModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.GERM_LAYER, GermModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.CLOSTRIDIUM_LAYER, ClostridiumModel::createBodyLayer);
+        
+        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_1, DiatomModel1::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_2, DiatomModel2::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_3, DiatomModel3::createBodyLayer);
+
+        event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);
     }}

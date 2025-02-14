@@ -18,6 +18,7 @@ import tank.mods.microworld.mobs.bacteriums.nocardia.NocardiaEntity;
 import tank.mods.microworld.mobs.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.mobs.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.mobs.multicellular.worm.WormEntity;
+import tank.mods.microworld.mobs.plants.diatom.DiatomEntity;
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
@@ -32,7 +33,9 @@ public class ModEventBusEvents {
         event.put(ModEntities.Nocardia.get(), NocardiaEntity.createAttributes().build());
         event.put(ModEntities.Clostridium.get(), ClostridiumEntity.createAttributes().build());
         event.put(ModEntities.Cyanobacteria.get(), CyanobacteriaEntity.createAttributes().build());
-    
+        
+        event.put(ModEntities.Diatom.get(), DiatomEntity.createAttributes().build());
+
         event.put(ModEntities.Worm.get(), WormEntity.createAttributes().build());
     }
 }

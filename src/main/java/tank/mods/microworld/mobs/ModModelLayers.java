@@ -32,5 +32,14 @@ public class ModModelLayers {
             
 	public static final ModelLayerLocation GERM_LAYER = new ModelLayerLocation(
             new ResourceLocation(MicroworldMod.MODID, "germ_layer"), "main");
+
+        public static final ModelLayerLocation DIATOM_LAYER_1 = new ModelLayerLocation(
+                new ResourceLocation(MicroworldMod.MODID, "diatom1"), "main");
+
+        public static final ModelLayerLocation DIATOM_LAYER_2 = new ModelLayerLocation(
+                new ResourceLocation(MicroworldMod.MODID, "diatom2"), "main");
+
+        public static final ModelLayerLocation DIATOM_LAYER_3 = new ModelLayerLocation(
+                new ResourceLocation(MicroworldMod.MODID, "diatom3"), "main");
 }
 	

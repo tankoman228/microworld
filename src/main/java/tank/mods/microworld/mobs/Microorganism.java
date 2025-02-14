@@ -4,7 +4,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Помечаем все микроорганизмы. Например, только на них реагирует Лупа
+ * Для того, чтобы пометить все микроорганизмы. Например, только на них реагирует Лупа
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Microorganism {
@@ -12,7 +12,9 @@ public @interface Microorganism {
     public enum MicroorganismType {
         CILLATE,
         BACTERIUM,
-        MULTICELLULAR
+        MULTICELLULAR,
+        PLANT,
+        AMOEBA
     }
     
     MicroorganismType value();
