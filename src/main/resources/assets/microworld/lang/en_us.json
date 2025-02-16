@@ -2,5 +2,6 @@
 	"microworld.tab": "Microworld",
     "item.microworld.dark_core": "Dark core",
 	"item.microworld.raw_dark_core": "Dark core (raw)",
-	"entity.microworld.worm": "Червячок :)"
+	"entity.microworld.worm": "Червячок :)",
+	"entity.microworld.rotifer": "Коловрат(ка)"
 }

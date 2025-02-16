@@ -13,6 +13,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import tank.mods.microworld.entity.multicellular.worm.WormAnimations;
 import tank.mods.microworld.entity.multicellular.worm.WormEntity;
@@ -186,16 +187,24 @@ public class RotiferModel <T extends Entity> extends HierarchicalModel<T>  {
 
 	@Override
 	public void setupAnim(Entity entity_, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
+        
+		this.root().getAllParts().forEach(ModelPart::resetPose);
 
-         var entity = (RotiferEntity) entity_;
-         animate(entity.swim, RotiferAnimations.SWIM, ageInTicks, 1f);
-         animate(entity.eat, RotiferAnimations.EAT, ageInTicks, 1f);
-         animate(entity.left_flex, RotiferAnimations.LEFT_FLEX, ageInTicks, 1f);
-         animate(entity.right_flex, RotiferAnimations.RIGHT_FLEX, ageInTicks, 1f);
-         animate(entity.flex, RotiferAnimations.FLEX, ageInTicks, 1f);
-         animate(entity.rotate, RotiferAnimations.ROTATE, ageInTicks, 1f);
-         animate(entity.antiflex, RotiferAnimations.ANTIFLEX, ageInTicks, 1f);
+        var entity = (RotiferEntity) entity_;
+        animate(entity.animation_swim, RotiferAnimations.SWIM, ageInTicks, 1f);
+        animate(entity.animation_eat, RotiferAnimations.EAT, ageInTicks, 1f);
+        animate(entity.animation_left_flex, RotiferAnimations.LEFT_FLEX, ageInTicks, 1f);
+        animate(entity.animation_right_flex, RotiferAnimations.RIGHT_FLEX, ageInTicks, 1f);
+        animate(entity.animation_flex, RotiferAnimations.FLEX, ageInTicks, 1f);
+        animate(entity.animation_rotate, RotiferAnimations.ROTATE, ageInTicks, 1f);
+        animate(entity.animation_antiflex, RotiferAnimations.ANTIFLEX, ageInTicks, 1f);
+
+
+		// Получаем угол из сущности
+		//root().yRot = entity.getYRot() * ((float) Math.PI / 180F);
+
+		// Вертикальный угол (если нужно, добавляем)
+		root().xRot = entity.xRotAdd * ((float) Math.PI / 180F); // Преобразуем в радианы для рендера	
 	}
 
 	@Override
