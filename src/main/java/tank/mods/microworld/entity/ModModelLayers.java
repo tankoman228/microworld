@@ -9,7 +9,7 @@ public class ModModelLayers {
 	public static final ModelLayerLocation WORM_LAYER = new ModelLayerLocation(
             new ResourceLocation(MicroworldMod.MODID, "worm_layer"), "main");
 
-    public static final ModelLayerLocation BACILLUS_LAYER = new ModelLayerLocation(
+        public static final ModelLayerLocation BACILLUS_LAYER = new ModelLayerLocation(
             new ResourceLocation(MicroworldMod.MODID, "bacillus_layer"), "main");
             
 	public static final ModelLayerLocation E_COLI_LAYER = new ModelLayerLocation(
@@ -41,5 +41,8 @@ public class ModModelLayers {
 
         public static final ModelLayerLocation DIATOM_LAYER_3 = new ModelLayerLocation(
                 new ResourceLocation(MicroworldMod.MODID, "diatom3"), "main");
+
+        public static final ModelLayerLocation ROTIFER_LAYER = new ModelLayerLocation(
+                new ResourceLocation(MicroworldMod.MODID, "rotifer"), "main");
 }
 	

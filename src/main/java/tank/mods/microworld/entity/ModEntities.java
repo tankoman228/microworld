@@ -23,6 +23,7 @@ import tank.mods.microworld.entity.bacteriums.germ.GermEntity;
 import tank.mods.microworld.entity.bacteriums.nocardia.NocardiaEntity;
 import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
+import tank.mods.microworld.entity.multicellular.rotifer.RotiferEntity;
 import tank.mods.microworld.entity.multicellular.worm.WormEntity;
 import tank.mods.microworld.entity.plants.diatom.DiatomEntity;
 import tank.mods.microworld.entity.projectiles.CellShurikenProjectileEntity;
@@ -35,11 +36,6 @@ public class ModEntities {
 	
 	 public static final DeferredRegister<EntityType<?>> MOB_TYPES =
 	    DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MicroworldMod.MODID);
-
-			    
-		public static final RegistryObject<EntityType<WormEntity>> Worm =
-				MOB_TYPES.register("worm", () -> EntityType.Builder.of(WormEntity::new, MobCategory.CREATURE)
-					.sized(3f, 3f).build("worm"));
 
 	    public static final RegistryObject<EntityType<GermEntity>> Germ =
 	            MOB_TYPES.register("germ", () -> EntityType.Builder.of(GermEntity::new, MobCategory.CREATURE)
@@ -70,14 +66,22 @@ public class ModEntities {
 						.sized(0.2f, 0.2f).build("clostridium"));
 	
 		public static final RegistryObject<EntityType<CyanobacteriaEntity>> Cyanobacteria =
-				MOB_TYPES.register("cyanobacteria", () -> EntityType.Builder.of(CyanobacteriaEntity::new, MobCategory.CREATURE)
-						.sized(0.1f, 0.1f).build("cyanobacteria"));
+		MOB_TYPES.register("cyanobacteria", () -> EntityType.Builder.of(CyanobacteriaEntity::new, MobCategory.CREATURE)
+				.sized(0.1f, 0.1f).build("cyanobacteria"));
 
 		public static final RegistryObject<EntityType<DiatomEntity>> Diatom =
-				MOB_TYPES.register("diatom", () -> EntityType.Builder.of(DiatomEntity::new, MobCategory.CREATURE)
-					.sized(0.4f, 0.4f).build("diatom"));
+		MOB_TYPES.register("diatom", () -> EntityType.Builder.of(DiatomEntity::new, MobCategory.CREATURE)
+			.sized(0.4f, 0.4f).build("diatom"));
 
 		
+		public static final RegistryObject<EntityType<WormEntity>> Worm =
+		MOB_TYPES.register("worm", () -> EntityType.Builder.of(WormEntity::new, MobCategory.CREATURE)
+			.sized(3f, 3f).build("worm"));
+		
+		
+		public static final RegistryObject<EntityType<RotiferEntity>> Rotifier =
+		MOB_TYPES.register("rotifer", () -> EntityType.Builder.of(RotiferEntity::new, MobCategory.CREATURE)
+			.sized(7f, 4f).build("rotifer"));
 		
 		
 	public static final DeferredRegister<EntityType<?>> PROJECTILE_TYPES =

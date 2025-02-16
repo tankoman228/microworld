@@ -24,6 +24,8 @@ import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumModel;
 import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumRenderer;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusModel;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusRenderer;
+import tank.mods.microworld.entity.multicellular.rotifer.RotiferModel;
+import tank.mods.microworld.entity.multicellular.rotifer.RotiferRenderer;
 import tank.mods.microworld.entity.multicellular.worm.WormModel;
 import tank.mods.microworld.entity.multicellular.worm.WormRenderer;
 import tank.mods.microworld.entity.plants.diatom.DiatomModel1;
@@ -48,6 +50,7 @@ public class ModEventBusClientEvents {
         
         EntityRenderers.register(ModEntities.Diatom.get(), DiatomRenderer::new);
 
+        EntityRenderers.register(ModEntities.Rotifier.get(), RotiferRenderer::new);
         EntityRenderers.register(ModEntities.Worm.get(), WormRenderer::new);
 
         //EntityRenderers.register(ModEntities.SANITIZER_PROJECTILE.get(), SanitizerProjectileRenderer::new);
@@ -65,6 +68,7 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_2, DiatomModel2::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_3, DiatomModel3::createBodyLayer);
 
+        event.registerLayerDefinition(ModModelLayers.ROTIFER_LAYER, RotiferModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);
     }
     @SubscribeEvent

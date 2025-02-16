@@ -17,6 +17,7 @@ import tank.mods.microworld.entity.bacteriums.germ.GermEntity;
 import tank.mods.microworld.entity.bacteriums.nocardia.NocardiaEntity;
 import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
+import tank.mods.microworld.entity.multicellular.rotifer.RotiferEntity;
 import tank.mods.microworld.entity.multicellular.worm.WormEntity;
 import tank.mods.microworld.entity.plants.diatom.DiatomEntity;
 
@@ -37,5 +38,6 @@ public class ModEventBusEvents {
         event.put(ModEntities.Diatom.get(), DiatomEntity.createAttributes().build());
 
         event.put(ModEntities.Worm.get(), WormEntity.createAttributes().build());
+        event.put(ModEntities.Rotifier.get(), RotiferEntity.createAttributes().build());
     }
 }

@@ -39,12 +39,6 @@ public class WormEntity extends Axolotl {
     public final AnimationState swimAnimationState = new AnimationState();
     public final AnimationState damagedAnimationState = new AnimationState();
     
-    private final ServerBossEvent bossEvent = new ServerBossEvent(
-    	    Component.translatable("entity.microworld.worm"), // Заголовок (можно локализовать)
-    	    BossEvent.BossBarColor.RED, // Цвет полоски
-    	    BossEvent.BossBarOverlay.PROGRESS // Вид полоски
-    	);
-    
     public WormEntity(EntityType<? extends Axolotl> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
@@ -153,26 +147,6 @@ public class WormEntity extends Axolotl {
     public boolean isPersistenceRequired() {
         return true; // Запрещает исчезновение при удалении игроков
     }
-    
-    /* BOSS BAR */
-    @Override
-    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
-        super.startSeenByPlayer(pServerPlayer);
-        this.bossEvent.addPlayer(pServerPlayer);
-    }
-
-    @Override
-    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
-        super.stopSeenByPlayer(pServerPlayer);
-        this.bossEvent.removePlayer(pServerPlayer);
-    }
-
-    @Override
-    public void aiStep() {
-        super.aiStep();
-        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
-    }
-    
 
 }
 

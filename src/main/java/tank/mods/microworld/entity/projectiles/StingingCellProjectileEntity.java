@@ -69,6 +69,6 @@ public class StingingCellProjectileEntity extends ThrowableItemProjectile {
 
     @Override
     protected Item getDefaultItem() {
-        return Items.SLIME_BALL;
+        return ModItems.stinging_cell.get();
     }
 }
