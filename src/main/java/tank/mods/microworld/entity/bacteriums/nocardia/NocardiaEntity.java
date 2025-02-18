@@ -16,7 +16,7 @@ public class NocardiaEntity extends Cod {
         super(p_28276_, p_28277_);
         //TODO Auto-generated constructor stub
     }
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder MobAttributes() {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 4D)
                 .add(Attributes.FOLLOW_RANGE, 20D)

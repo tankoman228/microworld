@@ -26,6 +26,7 @@ public class StingingCellProjectileEntity extends ThrowableItemProjectile {
         if (tickCount >= LIFETIME) {
             this.discard();
         }
+        this.setDeltaMovement(this.getDeltaMovement().x * 1.3, this.getDeltaMovement().y * 1.3, this.getDeltaMovement().z * 1.3);     
     }
 
     @Override

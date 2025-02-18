@@ -1,18 +1,22 @@
 package tank.mods.microworld.entity.bacteriums.spirillum;
 
 
+import java.util.List;
+
 import com.mojang.blaze3d.vertex.PoseStack;
+
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.entity.ModModelLayers;
 
-public class SpirillumRenderer extends MobRenderer<SpirillumEntity, SpirillumModel<SpirillumEntity>> {
+public class SpirillumRenderer extends MobRenderer<SpirillumEntity, EntityModel<SpirillumEntity>> {
     
-    public SpirillumRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new SpirillumModel<>(pContext.bakeLayer(ModModelLayers.SPIRILLUM_LAYER)), 0.1f);
+    public SpirillumRenderer(EntityRendererProvider.Context pContext, List<ModelLayerLocation> layers) {
+        super(pContext, new SpirillumModel<>(pContext.bakeLayer(layers.get(0))), 0.1f);
     }
 
     @Override

@@ -1,13 +1,14 @@
 package tank.mods.microworld;
 
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import tank.mods.microworld.entity.ModEntities;
-import tank.mods.microworld.entity.ModModelLayers;
 import tank.mods.microworld.entity.bacteriums.bacillus.BacillusModel;
 import tank.mods.microworld.entity.bacteriums.bacillus.BacillusRenderer;
 import tank.mods.microworld.entity.bacteriums.clostridium.ClostridiumModel;
@@ -36,9 +37,27 @@ import tank.mods.microworld.entity.plants.diatom.DiatomRenderer;
 
 @Mod.EventBusSubscriber(modid = MicroworldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
+    
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
 
+        for (var entity : ModEntities.REGISTERED_MOBS) {
+            entity.RegisterClientBus(event);
+        }
+
+        /* 
+        if (ModEntities.AUTOREGISTERED.isEmpty()) {
+            throw new IllegalStateException("No entities registered for autoregistration");
+        } 
+
+        for (var entity : ModEntities.AUTOREGISTERED) {
+            var layer = new ModelLayerLocation(
+            new ResourceLocation(MicroworldMod.MODID, entity.getClass().getSimpleName().toLowerCase() + "_layer"), "main");
+
+            entity.registerClient(event, layer);
+        }
+
+        
         EntityRenderers.register(ModEntities.Germ.get(), GermRenderer::new);
         EntityRenderers.register(ModEntities.E_Coli .get(), E_ColiRenderer::new);
         EntityRenderers.register(ModEntities.Staphylococcus.get(), StaphylococcusRenderer::new);
@@ -69,8 +88,9 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_3, DiatomModel3::createBodyLayer);
 
         event.registerLayerDefinition(ModModelLayers.ROTIFER_LAYER, RotiferModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);*/
     }
+
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.SANITIZER_PROJECTILE.get(), 

@@ -73,14 +73,4 @@ public class MicroworldMod {
     		e.accept(ModItems.DARK_CORE);
     	}
     }
-    
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-        }
-    }
 }

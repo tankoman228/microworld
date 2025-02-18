@@ -43,7 +43,8 @@ public class WormEntity extends Axolotl {
         super(pEntityType, pLevel);
     }
     
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder MobAttributes() {
+
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 20D)
                 .add(Attributes.FOLLOW_RANGE, 20D)

@@ -3,6 +3,9 @@ package tank.mods.microworld.entity;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraftforge.eventbus.api.IEventBus;
+
 /**
  * Для того, чтобы пометить все микроорганизмы. Например, только на них реагирует Лупа
  */
@@ -18,4 +21,8 @@ public @interface Microorganism {
     }
     
     MicroorganismType value();
+
+    Class<?> attributeSupplier() default AttributeSupplier.Builder.class;
+
+
 }

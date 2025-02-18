@@ -4,6 +4,9 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.level.Level;
 import tank.mods.microworld.entity.Microorganism;
@@ -70,5 +73,14 @@ public class DiatomEntity extends Cod {
 
     public void setShapeVariant(int variant) {
         this.entityData.set(SHAPE_VARIANT, variant);
+    }
+
+        public static AttributeSupplier.Builder MobAttributes() {
+
+        return Animal.createLivingAttributes()
+                .add(Attributes.MAX_HEALTH, 10D)
+                .add(Attributes.ARMOR_TOUGHNESS, 4f)
+                .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
+                .add(Attributes.ATTACK_DAMAGE, 5f);
     }
 }

@@ -23,7 +23,7 @@ public class SpirillumEntity extends Dolphin {
     public SpirillumEntity(EntityType<? extends Dolphin> p_28276_, Level p_28277_) {
         super(p_28276_, p_28277_);
     }
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder MobAttributes() {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 4D)
                 .add(Attributes.FOLLOW_RANGE, 20D)

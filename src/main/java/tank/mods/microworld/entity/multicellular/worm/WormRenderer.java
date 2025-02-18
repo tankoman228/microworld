@@ -1,7 +1,11 @@
 package tank.mods.microworld.entity.multicellular.worm;
 
+import java.util.List;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -9,12 +13,11 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.SlimeRenderer;
 import net.minecraft.resources.ResourceLocation;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.entity.ModModelLayers;
 
-public class WormRenderer extends MobRenderer< WormEntity,  WormModel< WormEntity>> {
+public class WormRenderer extends MobRenderer< WormEntity,  EntityModel<WormEntity>> {
 	
-    public  WormRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new  WormModel<>(pContext.bakeLayer(ModModelLayers.WORM_LAYER)), 0.1f);
+    public  WormRenderer(EntityRendererProvider.Context pContext, List<ModelLayerLocation> layers) {
+        super(pContext, new  WormModel<>(pContext.bakeLayer(layers.get(0))), 0.1f);
         //SlimeRenderer slimeRenderer;
     }
     

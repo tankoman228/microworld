@@ -1,19 +1,22 @@
 package tank.mods.microworld.entity.multicellular.rotifer;
 
+import java.util.List;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.entity.ModModelLayers;
 
-public class RotiferRenderer extends MobRenderer<RotiferEntity,  RotiferModel<RotiferEntity>> {
+public class RotiferRenderer extends MobRenderer<RotiferEntity,  EntityModel<RotiferEntity>> {
 	
-    public RotiferRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new RotiferModel<>(pContext.bakeLayer(ModModelLayers.ROTIFER_LAYER)), 0.1f);
+    public RotiferRenderer(EntityRendererProvider.Context pContext, List<ModelLayerLocation> layers) {
+        super(pContext, new RotiferModel<>(pContext.bakeLayer(layers.get(0))), 0.1f);
     }
     
     @Override

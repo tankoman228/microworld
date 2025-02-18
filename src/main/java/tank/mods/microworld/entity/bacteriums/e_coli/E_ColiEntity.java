@@ -103,7 +103,7 @@ public class E_ColiEntity extends Turtle {
         return super.mobInteract(player, hand);
     }
 
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder MobAttributes() {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 4D)
                 .add(Attributes.FOLLOW_RANGE, 20D)

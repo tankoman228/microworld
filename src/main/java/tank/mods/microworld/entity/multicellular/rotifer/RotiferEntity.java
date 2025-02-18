@@ -203,7 +203,7 @@ public class RotiferEntity extends Dolphin {
         this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder MobAttributes() {
         return Mob.createMobAttributes()
             .add(Attributes.MAX_HEALTH, 200.0)
             .add(Attributes.ATTACK_DAMAGE, 10.0)

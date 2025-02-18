@@ -1,18 +1,22 @@
 package tank.mods.microworld.entity.bacteriums.clostridium;
 
 
+import java.util.List;
+
 import com.mojang.blaze3d.vertex.PoseStack;
+
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.entity.ModModelLayers;
 
-public class ClostridiumRenderer extends MobRenderer<ClostridiumEntity, ClostridiumModel<ClostridiumEntity>> {
+public class ClostridiumRenderer extends MobRenderer<ClostridiumEntity, EntityModel<ClostridiumEntity>> {
     
-    public ClostridiumRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new ClostridiumModel<>(pContext.bakeLayer(ModModelLayers.CLOSTRIDIUM_LAYER)), 0.1f);
+    public ClostridiumRenderer(EntityRendererProvider.Context pContext, List<ModelLayerLocation> layers) {
+        super(pContext, new ClostridiumModel<>(pContext.bakeLayer(layers.get(0))), 0.1f);
     }
 
     @Override

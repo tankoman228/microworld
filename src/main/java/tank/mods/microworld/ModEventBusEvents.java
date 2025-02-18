@@ -4,6 +4,7 @@ import java.rmi.registry.Registry;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -25,7 +26,12 @@ import tank.mods.microworld.entity.plants.diatom.DiatomEntity;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-        
+
+        for (var entity : ModEntities.REGISTERED_MOBS) {
+            entity.RegisterBus(event);;
+        }
+
+        /* 
         event.put(ModEntities.Bacillus.get(), BacillusEntity.createAttributes().build());
         event.put(ModEntities.Germ.get(), GermEntity.createAttributes().build());
         event.put(ModEntities.E_Coli.get(), E_ColiEntity.createAttributes().build());
@@ -38,6 +44,6 @@ public class ModEventBusEvents {
         event.put(ModEntities.Diatom.get(), DiatomEntity.createAttributes().build());
 
         event.put(ModEntities.Worm.get(), WormEntity.createAttributes().build());
-        event.put(ModEntities.Rotifier.get(), RotiferEntity.createAttributes().build());
+        event.put(ModEntities.Rotifier.get(), RotiferEntity.createAttributes().build());*/
     }
 }

@@ -1,17 +1,21 @@
 package tank.mods.microworld.entity.bacteriums.staphylococcus;
 
+import java.util.List;
+
 import com.mojang.blaze3d.vertex.PoseStack;
+
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import tank.mods.microworld.MicroworldMod;
-import tank.mods.microworld.entity.ModModelLayers;
 
-public class StaphylococcusRenderer extends MobRenderer<StaphylococcusEntity, StaphylococcusModel<StaphylococcusEntity>> {
+public class StaphylococcusRenderer extends MobRenderer<StaphylococcusEntity, EntityModel<StaphylococcusEntity>> {
     
-    public StaphylococcusRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new StaphylococcusModel<>(pContext.bakeLayer(ModModelLayers.STAPHYLOCOCCUS_LAYER)), 0.1f);
+    public StaphylococcusRenderer(EntityRendererProvider.Context pContext, List<ModelLayerLocation> layers) {
+        super(pContext, new StaphylococcusModel<>(pContext.bakeLayer(layers.get(0))), 0.1f);
     }
 
     @Override
