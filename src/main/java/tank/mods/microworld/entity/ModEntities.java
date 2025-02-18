@@ -56,6 +56,9 @@ import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumRenderer;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusModel;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusRenderer;
+import tank.mods.microworld.entity.ciliates.shoe.ShoeEntity;
+import tank.mods.microworld.entity.ciliates.shoe.ShoeModel;
+import tank.mods.microworld.entity.ciliates.shoe.ShoeRenderer;
 import tank.mods.microworld.entity.multicellular.rotifer.RotiferEntity;
 import tank.mods.microworld.entity.multicellular.rotifer.RotiferModel;
 import tank.mods.microworld.entity.multicellular.rotifer.RotiferRenderer;
@@ -100,12 +103,13 @@ public class ModEntities {
 		"rotifer", 7f, 4f, MobCategory.CREATURE
 	);
 
+
 	public static final RegistryObject<EntityType<GermEntity>> Germ = registerMob(
 		GermRenderer.class, 
 		List.of(
 			(Class<? extends EntityModel<?>>) (Class<?>) GermModel.class),
 		GermEntity.class, 
-		"germ", 0.3f, 0.3f, MobCategory.CREATURE
+		"germ", 0.3f, 0.3f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<BacillusEntity>> Bacillus = registerMob(
@@ -114,7 +118,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) BacillusModel.class
 		),
 		BacillusEntity.class, 
-		"bacillus", 0.3f, 0.3f, MobCategory.CREATURE
+		"bacillus", 0.3f, 0.3f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<E_ColiEntity>> E_Coli = registerMob(
@@ -123,7 +127,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) E_ColiModel.class
 		),
 		E_ColiEntity.class, 
-		"e_coli", 0.1f, 0.1f, MobCategory.CREATURE
+		"e_coli", 0.1f, 0.1f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<StaphylococcusEntity>> Staphylococcus = registerMob(
@@ -132,7 +136,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) StaphylococcusModel.class
 		),
 		StaphylococcusEntity.class, 
-		"staphylococcus", 0.2f, 0.2f, MobCategory.CREATURE
+		"staphylococcus", 0.2f, 0.2f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<SpirillumEntity>> Spirillum = registerMob(
@@ -141,7 +145,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) SpirillumModel.class
 		),
 		SpirillumEntity.class, 
-		"spirillum", 0.25f, 0.25f, MobCategory.CREATURE
+		"spirillum", 0.25f, 0.25f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<NocardiaEntity>> Nocardia = registerMob(
@@ -150,7 +154,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) NocardiaModel.class
 		),
 		NocardiaEntity.class, 
-		"nocardia", 0.1f, 0.1f, MobCategory.CREATURE
+		"nocardia", 0.1f, 0.1f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<ClostridiumEntity>> Clostridium = registerMob(
@@ -159,7 +163,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) ClostridiumModel.class
 		),
 		ClostridiumEntity.class, 
-		"clostridium", 0.2f, 0.2f, MobCategory.CREATURE
+		"clostridium", 0.2f, 0.2f, MobCategory.WATER_AMBIENT
 	);
 
 	public static final RegistryObject<EntityType<CyanobacteriaEntity>> Cyanobacteria = registerMob(
@@ -168,7 +172,7 @@ public class ModEntities {
 			(Class<? extends EntityModel<?>>) (Class<?>) CyanobacteriaModel.class
 		),
 		CyanobacteriaEntity.class,
-		"cyanobacteria", 0.1f, 0.1f, MobCategory.CREATURE
+		"cyanobacteria", 0.1f, 0.1f, MobCategory.WATER_AMBIENT
 	);
  
 	public static final RegistryObject<EntityType<DiatomEntity>> DIATOM = registerMob(
@@ -180,6 +184,15 @@ public class ModEntities {
 		),
 		DiatomEntity.class, 
 		"diatom", 0.4f, 0.4f, MobCategory.CREATURE
+	);
+	 
+	public static final RegistryObject<EntityType<ShoeEntity>> SHOE = registerMob(
+		ShoeRenderer.class, 
+		List.of(
+			(Class<? extends EntityModel<?>>) (Class<?>) ShoeModel.class
+		),
+		ShoeEntity.class, 
+		"shoe", 8f, 4f, MobCategory.CREATURE
 	);
 		
 		

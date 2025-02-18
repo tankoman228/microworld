@@ -22,5 +22,6 @@ public class AdvancedAnimationState extends AnimationState {
             stop();
             startIfStopped(currentTick); 
         } 
+        startIfStopped(currentTick); 
     }
 }

@@ -66,6 +66,14 @@ public class RotiferEntity extends Dolphin {
         super(pEntityType, pLevel);
     }
 
+    public static AttributeSupplier.Builder MobAttributes() {
+        return Mob.createMobAttributes()
+            .add(Attributes.MAX_HEALTH, 200.0)
+            .add(Attributes.ATTACK_DAMAGE, 10.0)
+            .add(Attributes.MOVEMENT_SPEED, 0.2)
+            .add(Attributes.FOLLOW_RANGE, 60);
+    }
+
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
@@ -201,14 +209,6 @@ public class RotiferEntity extends Dolphin {
     public void aiStep() {
         super.aiStep();
         this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
-    }
-
-    public static AttributeSupplier.Builder MobAttributes() {
-        return Mob.createMobAttributes()
-            .add(Attributes.MAX_HEALTH, 200.0)
-            .add(Attributes.ATTACK_DAMAGE, 10.0)
-            .add(Attributes.MOVEMENT_SPEED, 0.2)
-            .add(Attributes.FOLLOW_RANGE, 60);
     }
 
     // Пример методов для проверки типа блока

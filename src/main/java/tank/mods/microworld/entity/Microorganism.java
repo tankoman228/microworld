@@ -13,7 +13,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 public @interface Microorganism {
     
     public enum MicroorganismType {
-        CILLATE,
+        CILIATE,
         BACTERIUM,
         MULTICELLULAR,
         PLANT,

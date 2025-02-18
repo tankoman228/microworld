@@ -1,10 +1,25 @@
-// Made with Blockbench 4.12.2
-// Exported for Minecraft version 1.17 or later with Mojang mappings
-// Paste this class into your mod and generate all required imports
+package tank.mods.microworld.entity.ciliates.shoe;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 
-public class shoe<T extends Shoe> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.model.geom.builders.CubeListBuilder;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
+import net.minecraft.client.model.geom.builders.MeshDefinition;
+import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import tank.mods.microworld.entity.Microorganism;
+
+public class ShoeModel <T extends Entity> extends HierarchicalModel<T> {
+
+    // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "shoe"), "main");
 	private final ModelPart root;
 	private final ModelPart organs;
@@ -19,7 +34,8 @@ public class shoe<T extends Shoe> extends EntityModel<T> {
 	private final ModelPart other_decorations;
 	private final ModelPart body;
 
-	public shoe(ModelPart root) {
+	public ShoeModel(ModelPart root) {
+        
 		this.root = root.getChild("root");
 		this.organs = this.root.getChild("organs");
 		this.jimjim_vacuole = this.organs.getChild("jimjim_vacuole");
@@ -106,12 +122,23 @@ public class shoe<T extends Shoe> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Shoe entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        
+        this.root().getAllParts().forEach(ModelPart::resetPose);
+        var shoe = (ShoeEntity) entity;
+        
+        animate(shoe.animationState, ShoeAnimations.ANIMATION, ageInTicks, 1f);
 
+        root().xRot = shoe.rotationXRad;
 	}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		root.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
+
+    @Override
+    public ModelPart root() {
+        return root;
+    }
 }
