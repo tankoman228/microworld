@@ -30,20 +30,5 @@ public class ModEventBusEvents {
         for (var entity : ModEntities.REGISTERED_MOBS) {
             entity.RegisterBus(event);;
         }
-
-        /* 
-        event.put(ModEntities.Bacillus.get(), BacillusEntity.createAttributes().build());
-        event.put(ModEntities.Germ.get(), GermEntity.createAttributes().build());
-        event.put(ModEntities.E_Coli.get(), E_ColiEntity.createAttributes().build());
-        event.put(ModEntities.Staphylococcus.get(), StaphylococcusEntity.createAttributes().build());
-        event.put(ModEntities.Spirillum.get(), SpirillumEntity.createAttributes().build());
-        event.put(ModEntities.Nocardia.get(), NocardiaEntity.createAttributes().build());
-        event.put(ModEntities.Clostridium.get(), ClostridiumEntity.createAttributes().build());
-        event.put(ModEntities.Cyanobacteria.get(), CyanobacteriaEntity.createAttributes().build());
-        
-        event.put(ModEntities.Diatom.get(), DiatomEntity.createAttributes().build());
-
-        event.put(ModEntities.Worm.get(), WormEntity.createAttributes().build());
-        event.put(ModEntities.Rotifier.get(), RotiferEntity.createAttributes().build());*/
     }
 }

@@ -81,6 +81,7 @@ public class DiatomEntity extends Cod {
                 .add(Attributes.MAX_HEALTH, 10D)
                 .add(Attributes.ARMOR_TOUGHNESS, 4f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
-                .add(Attributes.ATTACK_DAMAGE, 5f);
+                .add(Attributes.ATTACK_DAMAGE, 5f)
+                .add(Attributes.FOLLOW_RANGE, 10);
     }
 }

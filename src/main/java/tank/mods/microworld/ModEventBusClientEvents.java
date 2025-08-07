@@ -45,50 +45,6 @@ public class ModEventBusClientEvents {
             entity.RegisterClientBus(event);
         }
 
-        /* 
-        if (ModEntities.AUTOREGISTERED.isEmpty()) {
-            throw new IllegalStateException("No entities registered for autoregistration");
-        } 
-
-        for (var entity : ModEntities.AUTOREGISTERED) {
-            var layer = new ModelLayerLocation(
-            new ResourceLocation(MicroworldMod.MODID, entity.getClass().getSimpleName().toLowerCase() + "_layer"), "main");
-
-            entity.registerClient(event, layer);
-        }
-
-        
-        EntityRenderers.register(ModEntities.Germ.get(), GermRenderer::new);
-        EntityRenderers.register(ModEntities.E_Coli .get(), E_ColiRenderer::new);
-        EntityRenderers.register(ModEntities.Staphylococcus.get(), StaphylococcusRenderer::new);
-        EntityRenderers.register(ModEntities.Spirillum.get(), SpirillumRenderer::new);
-        EntityRenderers.register(ModEntities.Nocardia.get(), NocardiaRenderer::new);
-        EntityRenderers.register(ModEntities.Clostridium.get(), ClostridiumRenderer::new);
-        EntityRenderers.register(ModEntities.Cyanobacteria.get(), CyanobacteriaRenderer::new);
-        EntityRenderers.register(ModEntities.Bacillus.get(), BacillusRenderer::new);
-        
-        EntityRenderers.register(ModEntities.Diatom.get(), DiatomRenderer::new);
-
-        EntityRenderers.register(ModEntities.Rotifier.get(), RotiferRenderer::new);
-        EntityRenderers.register(ModEntities.Worm.get(), WormRenderer::new);
-
-        //EntityRenderers.register(ModEntities.SANITIZER_PROJECTILE.get(), SanitizerProjectileRenderer::new);
-        
-        event.registerLayerDefinition(ModModelLayers.BACILLUS_LAYER, BacillusModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.E_COLI_LAYER, E_ColiModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.STAPHYLOCOCCUS_LAYER, StaphylococcusModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.SPIRILLUM_LAYER, SpirillumModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.NOCARDIA_LAYER, NocardiaModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.CYANOBACTERIA_LAYER, CyanobacteriaModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.GERM_LAYER, GermModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.CLOSTRIDIUM_LAYER, ClostridiumModel::createBodyLayer);
-        
-        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_1, DiatomModel1::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_2, DiatomModel2::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.DIATOM_LAYER_3, DiatomModel3::createBodyLayer);
-
-        event.registerLayerDefinition(ModModelLayers.ROTIFER_LAYER, RotiferModel::createBodyLayer);
-        event.registerLayerDefinition(ModModelLayers.WORM_LAYER, WormModel::createBodyLayer);*/
     }
 
     @SubscribeEvent

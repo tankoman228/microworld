@@ -56,6 +56,9 @@ import tank.mods.microworld.entity.bacteriums.spirillum.SpirillumRenderer;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusEntity;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusModel;
 import tank.mods.microworld.entity.bacteriums.staphylococcus.StaphylococcusRenderer;
+import tank.mods.microworld.entity.ciliates.paramecium_x.ParameciumXEntity;
+import tank.mods.microworld.entity.ciliates.paramecium_x.ParameciumXModel;
+import tank.mods.microworld.entity.ciliates.paramecium_x.ParameciumXRenderer;
 import tank.mods.microworld.entity.ciliates.shoe.ShoeEntity;
 import tank.mods.microworld.entity.ciliates.shoe.ShoeModel;
 import tank.mods.microworld.entity.ciliates.shoe.ShoeRenderer;
@@ -186,6 +189,8 @@ public class ModEntities {
 		"diatom", 0.4f, 0.4f, MobCategory.CREATURE
 	);
 	 
+
+	// Инфузории
 	public static final RegistryObject<EntityType<ShoeEntity>> SHOE = registerMob(
 		ShoeRenderer.class, 
 		List.of(
@@ -193,6 +198,14 @@ public class ModEntities {
 		),
 		ShoeEntity.class, 
 		"shoe", 8f, 4f, MobCategory.CREATURE
+	);
+	public static final RegistryObject<EntityType<ParameciumXEntity>> PARAMECIUM_X = registerMob(
+		ParameciumXRenderer.class, 
+		List.of(
+			(Class<? extends EntityModel<?>>) (Class<?>) ParameciumXModel.class
+		),
+		ParameciumXEntity.class, 
+		"paramecium_x", 8f, 4f, MobCategory.CREATURE
 	);
 		
 		
